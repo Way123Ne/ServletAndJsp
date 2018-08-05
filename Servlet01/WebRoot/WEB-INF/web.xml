@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name></display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>reqInfoServlet</servlet-name>
+		<!-- 类名要写完整，包含包名，注意大小写 -->
+		<servlet-class>com.wayne.request.ReqInfoServlet</servlet-class>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>reqInfoServlet</servlet-name>
+		<url-pattern>/reqInfo</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 通配符匹配 -->
+	<!-- <servlet-mapping>
+		<servlet-name>reqInfoServlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping> -->
+	<!-- 后綴匹配 -->
+		<!-- <servlet-mapping>
+		<servlet-name>reqInfoServlet</servlet-name>
+		<url-pattern>*.abc</url-pattern>
+	</servlet-mapping> -->
+
+</web-app>
